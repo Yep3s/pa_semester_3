@@ -6,29 +6,44 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class PanelStart {
+public class LoginAdmin {
 
     @FXML
     private AnchorPane base;
 
     @FXML
-    private Button entrarTaquillaAdmin;
+    private Button entradaAdmin;
+ 
+    @FXML
+    private Label errorNoValido;
 
     @FXML
-    private Button entrarTaquillaOp;
+    private PasswordField passwordAdmin;
 
     @FXML
-    private Button entrarTaquillaUsuario;
+    private TextField usuarioAdmin;
 
     @FXML
-    void entradaAdminTaquillaBtn(ActionEvent event) {
+    private Button volverAlStart;
+
+    @FXML
+    void eventKey(KeyEvent event) {
+
+    }
+
+    @FXML
+    void regresarAtrasBtn(ActionEvent event) {
         
                          try {
             // Cargar el archivo FXML de la segunda vista
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/1Login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/0panelStart.fxml"));
             Parent root = loader.load();
 
             // Obtener el controlador de la segunda vista
@@ -50,20 +65,16 @@ public class PanelStart {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        
-        
         
 
     }
 
     @FXML
-    void entradaOpLogisticoTaquillaBtn(ActionEvent event) {
+    void showWindow2(ActionEvent event) {
         
-        
-                 try {
+                                 try {
             // Cargar el archivo FXML de la segunda vista
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/LogisticOperatorView/1LoginOpLogistico.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/2menuAdmin.fxml"));
             Parent root = loader.load();
 
             // Obtener el controlador de la segunda vista
@@ -85,36 +96,8 @@ public class PanelStart {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-    }
-
-    @FXML
-    void entradaUsuarioTaquillaBtn(ActionEvent event) {
         
-         try {
-            // Cargar el archivo FXML de la segunda vista
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/1LoginUsuario.fxml"));
-            Parent root = loader.load();
-
-            // Obtener el controlador de la segunda vista
-            // Si es necesario realizar acciones en el controlador de la segunda vista, obtén el controlador aquís
-            // Ejemplo: SegundoControlador controller = loader.getController();
-            // Crear una nueva escena y configurarla
-            Scene scene = new Scene(root);
-
-            // Crear una nueva ventana
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Taquilla Online"); // Puedes personalizar el título
-
-            // Mostrar la nueva ventana
-            stage.show();
-
-            // Cerrar la ventana actual (opcional)
-            ((Stage) base.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        
 
     }
 

@@ -100,7 +100,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="cerrarSesion" mnemonicParsing="false" onAction="#cerrarSesionBtn" style="-fx-border-radius: 118px; -fx-background-radius: 118px; -fx-background-color: purple; -fx-border-color: white;" text="Cerrar Sesión" textFill="WHITE" translateX="320.0" translateY="400.0">
+                  <Button fx:id="cerrarSesion" mnemonicParsing="false" onAction="#cerrarSesionBtn" style="-fx-border-radius: 118px; -fx-background-radius: 118px; -fx-background-color: #ff2424; -fx-border-color: wblackhite;" text="Cerrar Sesión" textFill="WHITE" translateX="320.0" translateY="400.0">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>

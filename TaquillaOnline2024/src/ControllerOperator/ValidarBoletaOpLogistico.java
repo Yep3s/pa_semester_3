@@ -6,41 +6,52 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class LoginOpLogistico {
+public class ValidarBoletaOpLogistico {
 
     @FXML
     private AnchorPane base;
 
     @FXML
-    private Label errorMessage;
+    private TextField validarBoleta;
 
     @FXML
-    private Button loginButton;
+    private Button verificarBoton;
 
     @FXML
-    private PasswordField passwordOpLogistico;
+    private Button volverAnteriorVentana;
 
     @FXML
-    private VBox usernameField;
+    void validarBoletaInput(KeyEvent event) {
+
+    }
 
     @FXML
-    private TextField usuarioOpLogistico;
+    void verificarBtn(ActionEvent event) {
+        
+                        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/LogisticOperatorView/4validacionBoletaVeridica.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Taquilla Online");
+            stage.show();
+            ((Stage) base.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @FXML
-    private Button volverAlStart;
-
-    @FXML
-    void loginBtn(ActionEvent event) {
-
-        try {
+    void volverAnteriorBtn(ActionEvent event) {
+        
+                        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/LogisticOperatorView/2menuOpLogistico.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -52,34 +63,6 @@ public class LoginOpLogistico {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-    }
-
-    @FXML
-    void passwordOpLogisticoInput(KeyEvent event) {
-
-    }
-
-    @FXML
-    void regresarAtrasBtn(ActionEvent event) {
-
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/0panelStart.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Taquilla Online");
-            stage.show();
-            ((Stage) base.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    @FXML
-    void usuarioOpLogisticoInput(KeyEvent event) {
 
     }
 

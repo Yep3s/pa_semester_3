@@ -6,39 +6,42 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class CrearEvento {
-
-    @FXML
-    private Button atrasBtn;
+public class VerEventosCreados {
 
     @FXML
     private AnchorPane base;
 
     @FXML
-    private TextField eventCode;
+    private Button botonVolver;
 
     @FXML
-    private DatePicker eventDate;
+    private TableColumn<?, ?> codigo;
 
     @FXML
-    private TextArea eventDescription;
+    private TableColumn<?, ?> descripcion;
 
     @FXML
-    private TextField eventName;
+    private TableColumn<?, ?> fecha;
 
     @FXML
-    private Button siguienteBtn;
+    private TableColumn<?, ?> id;
 
     @FXML
-    void atrasBtn(ActionEvent event) {
+    private TableColumn<?, ?> nombre;
+
+    @FXML
+    private TableView<?> tableEventos;
+
+    @FXML
+    void volverBtn(ActionEvent event) {
         
-                                         try {
+        
+                        try {
             // Cargar el archivo FXML de la segunda vista
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/2menuAdmin.fxml"));
             Parent root = loader.load();
@@ -62,15 +65,6 @@ public class CrearEvento {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        
-
-    }
-
-    @FXML
-    void siguienteBtn(ActionEvent event) {
-        
-
 
     }
 

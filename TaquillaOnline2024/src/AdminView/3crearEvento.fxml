@@ -75,7 +75,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="siguienteBtn" layoutX="214.0" layoutY="615.0" mnemonicParsing="false" onAction="#siguienteBtn" prefHeight="48.0" prefWidth="147.0" style="-fx-background-color: #15d789; -fx-border-radius: 118px; -fx-background-radius: 118px; -fx-border-color: black;" text="Siguiente">
+      <Button fx:id="siguienteBtn" layoutX="214.0" layoutY="615.0" mnemonicParsing="false" onAction="#siguienteBtn" prefHeight="48.0" prefWidth="147.0" style="-fx-background-color: #15d789; -fx-border-radius: 118px; -fx-background-radius: 118px; -fx-border-color: black;" text="Guardar">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>

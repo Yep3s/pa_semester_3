@@ -6,39 +6,77 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class CrearEvento {
+public class AsignarLocalidadesPideCode {
 
     @FXML
-    private Button atrasBtn;
+    private Label CapacidadLocalidadLabel;
 
     @FXML
     private AnchorPane base;
 
     @FXML
-    private TextField eventCode;
+    private Button botonVolver;
 
     @FXML
-    private DatePicker eventDate;
+    private TextField codigoEvento;
 
     @FXML
-    private TextArea eventDescription;
+    private TextField codigoLocalidad;
 
     @FXML
-    private TextField eventName;
+    private Label codigoLocalidadLabel;
 
     @FXML
-    private Button siguienteBtn;
+    private Button consultarEventoBtn;
 
     @FXML
-    void atrasBtn(ActionEvent event) {
+    private Button consultarLocalidadbtn;
+
+    @FXML
+    private Label dateLabel;
+
+    @FXML
+    private Label descriptionLabel;
+
+    @FXML
+    private Label errorMessage;
+
+    @FXML
+    private Label eventNameLabel;
+
+    @FXML
+    private Label localidadLabel;
+
+    @FXML
+    private Button siguenteAsignacion;
+
+    @FXML
+    private Label valorLocalidadLabel;
+
+    @FXML
+    void consultarEvento(ActionEvent event) {
+
+    }
+
+    @FXML
+    void consultarLocalidad(ActionEvent event) {
+
+    }
+
+    @FXML
+    void siguienteAsignacion(ActionEvent event) {
+
+    }
+
+    @FXML
+    void volverBtn(ActionEvent event) {
         
-                                         try {
+                try {
             // Cargar el archivo FXML de la segunda vista
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/2menuAdmin.fxml"));
             Parent root = loader.load();
@@ -63,14 +101,6 @@ public class CrearEvento {
             e.printStackTrace();
         }
         
-        
-
-    }
-
-    @FXML
-    void siguienteBtn(ActionEvent event) {
-        
-
 
     }
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="720.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CrearOperadorLogistico">
+   <children>
+      <HBox prefHeight="720.0" prefWidth="564.0">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="720.0" prefWidth="585.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Creacion De Operador Logistico" translateX="138.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Separator prefWidth="200.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Del Operador Logistico" translateX="180.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="nombreOpLogistico" alignment="CENTER" onKeyTyped="#nombreOpLogisticoInput" promptText="Ingresa El Nombre Completo Del Operador Logistico" style="-fx-background-radius: 118px; -fx-border-radius: 118px;">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cedula Del Operador Logistico" translateX="200.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin></Text>
+                  <TextField fx:id="cedulaOpLogistico" alignment="CENTER" onKeyTyped="#cedulaOpLogisticoInput" promptText="Ingresa El Numero De Cedula Del Operador Logistico" style="-fx-background-radius: 118px; -fx-border-radius: 118px;">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numero De Telefono Del Operador Logistico" translateX="165.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin></Text>
+                  <TextField fx:id="numeroTelefonoOpLogistico" alignment="CENTER" onKeyTyped="#telefonoOpLogisticoInput" promptText="Ingresa El Numero De Telefono Del Operador Logistico" style="-fx-background-radius: 118px; -fx-border-radius: 118px;">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Correo Electronico Del Operador Logistico" translateX="175.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin></Text>
+                  <TextField fx:id="correoOpLogistico" alignment="CENTER" onKeyTyped="#correoOpLogisticoInput" promptText="Ingresa El Correo Electronico Del Operador Logistico" style="-fx-background-radius: 118px; -fx-border-radius: 118px;">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña Del Operador Logistico" translateX="180.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Text>
+                  <PasswordField fx:id="passwordOpLogistico" alignment="CENTER" onKeyTyped="#passwordOpLogisticoInput" promptText="Ingresa La Contraseña Para El Operador Logistico" style="-fx-background-radius: 118px; -fx-border-radius: 118px;">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Separator prefHeight="83.0" prefWidth="558.0" />
+                  <Button fx:id="guardarBoton" mnemonicParsing="false" onAction="#guardarBtn" prefHeight="70.0" prefWidth="255.0" style="-fx-background-radius: 118px; -fx-border-radius: 118px;" text="Guardar" translateX="120.0" translateY="30.0">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="volverAtrasBoton" mnemonicParsing="false" onAction="#volverAtrasBtn" style="-fx-background-radius: 118px; -fx-border-radius: 118px;" text="Volver Atras" translateY="65.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

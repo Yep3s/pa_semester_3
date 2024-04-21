@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="720.0" prefWidth="572.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerAdmin.CrearEvento">
+   <children>
+      <Text fill="WHITE" layoutX="139.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creacion De Eventos De Taquilla Online" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="122.0" fitWidth="138.0" layoutX="414.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/taquillaOnline.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="eventCode" alignment="CENTER" layoutX="344.0" layoutY="210.0" prefHeight="26.0" prefWidth="147.0" promptText="Codigo Del Evento" style="-fx-background-color: white; -fx-background-radius: 118px; -fx-border-radius: 118px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Text fill="WHITE" layoutX="109.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo Del Evento">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="186.0" fitWidth="234.0" layoutX="184.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/calendario.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="eventName" alignment="CENTER" layoutX="336.0" layoutY="270.0" prefHeight="26.0" prefWidth="162.0" promptText="Nombre Del Evento" style="-fx-background-color: white; -fx-background-radius: 118px; -fx-border-radius: 118px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Text fill="WHITE" layoutX="101.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Del Evento">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="114.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Del Evento">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="206.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion Del Evento">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="eventDate" layoutX="314.0" layoutY="337.0" promptText="Fecha Del Evento" style="-fx-background-color: white;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+      <TextArea fx:id="eventDescription" layoutX="139.0" layoutY="441.0" prefHeight="122.0" prefWidth="291.0" promptText="Ingresa La Descripcion Del Evento" style="-fx-background-color: white;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextArea>
+      <Button fx:id="atrasBtn" alignment="CENTER" layoutX="22.0" layoutY="668.0" mnemonicParsing="false" onAction="#atrasBtn" style="-fx-background-color: #ff2424; -fx-background-radius: 118px; -fx-border-color: black; -fx-border-radius: 118px;" text="Volver Atras" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="siguienteBtn" layoutX="214.0" layoutY="615.0" mnemonicParsing="false" onAction="#siguienteBtn" prefHeight="48.0" prefWidth="147.0" style="-fx-background-color: #15d789; -fx-border-radius: 118px; -fx-background-radius: 118px; -fx-border-color: black;" text="Guardar">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

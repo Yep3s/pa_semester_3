@@ -11,36 +11,36 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class VerEventosCreados {
+public class VerOperadoresLogisticos {
 
     @FXML
     private AnchorPane base;
 
     @FXML
-    private Button botonVolver;
+    private TableColumn<?, ?> cedula;
 
     @FXML
-    private TableColumn<?, ?> codigo;
-
-    @FXML
-    private TableColumn<?, ?> descripcion;
-
-    @FXML
-    private TableColumn<?, ?> fecha;
-
-    @FXML
-    private TableColumn<?, ?> id;
+    private TableColumn<?, ?> correo;
 
     @FXML
     private TableColumn<?, ?> nombre;
 
     @FXML
-    private TableView<?> tableEventos;
+    private TableColumn<?, ?> password;
 
     @FXML
-    void volverBtn(ActionEvent event) {
+    private TableView<?> tablaOpLogistico;
 
-        try {
+    @FXML
+    private TableColumn<?, ?> telefono;
+
+    @FXML
+    private Button volverAtrasMenu;
+
+    @FXML
+    void volverAlMenuPrincipal(ActionEvent event) {
+        
+                try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/2menuAdmin.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -52,6 +52,7 @@ public class VerEventosCreados {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
 
     }
 

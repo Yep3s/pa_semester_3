@@ -35,37 +35,37 @@ public class CrearEventoLocalidades {
 
     @FXML
     void atrasBtn(ActionEvent event) {
-        
+
         try {
-            // Cargar el archivo FXML de la segunda vista
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/2menuAdmin.fxml"));
             Parent root = loader.load();
-
-            // Obtener el controlador de la segunda vista
-            // Si es necesario realizar acciones en el controlador de la segunda vista, obtén el controlador aquís
-            // Ejemplo: SegundoControlador controller = loader.getController();
-            // Crear una nueva escena y configurarla
             Scene scene = new Scene(root);
-
-            // Crear una nueva ventana
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setTitle("Taquilla Online"); // Puedes personalizar el título
-
-            // Mostrar la nueva ventana
+            stage.setTitle("Taquilla Online");
             stage.show();
-
-            // Cerrar la ventana actual (opcional)
             ((Stage) base.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
 
     }
 
     @FXML
     void guardarBtn(ActionEvent event) {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/5.1guardadoLocalidad.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Taquilla Online");
+            stage.show();
+            ((Stage) base.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

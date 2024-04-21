@@ -6,15 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class AsignarLocalidadesPideCode {
-
-    @FXML
-    private Label CapacidadLocalidadLabel;
+public class DatosEstadisticos {
 
     @FXML
     private AnchorPane base;
@@ -23,55 +20,19 @@ public class AsignarLocalidadesPideCode {
     private Button botonVolver;
 
     @FXML
-    private TextField codigoEvento;
+    private TableColumn<?, ?> cantidad;
 
     @FXML
-    private TextField codigoLocalidad;
+    private TableColumn<?, ?> evento;
 
     @FXML
-    private Label codigoLocalidadLabel;
+    private TableColumn<?, ?> localidad;
 
     @FXML
-    private Button consultarEventoBtn;
+    private TableView<?> tableEventos;
 
     @FXML
-    private Button consultarLocalidadbtn;
-
-    @FXML
-    private Label dateLabel;
-
-    @FXML
-    private Label descriptionLabel;
-
-    @FXML
-    private Label errorMessage;
-
-    @FXML
-    private Label eventNameLabel;
-
-    @FXML
-    private Label localidadLabel;
-
-    @FXML
-    private Button siguenteAsignacion;
-
-    @FXML
-    private Label valorLocalidadLabel;
-
-    @FXML
-    void consultarEvento(ActionEvent event) {
-
-    }
-
-    @FXML
-    void consultarLocalidad(ActionEvent event) {
-
-    }
-
-    @FXML
-    void siguienteAsignacion(ActionEvent event) {
-
-    }
+    private TableColumn<?, ?> total;
 
     @FXML
     void volverBtn(ActionEvent event) {

@@ -6,47 +6,28 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class LoginUsuario {
+public class MenuUsuario {
 
     @FXML
     private AnchorPane base;
 
     @FXML
-    private Label errorMessage;
+    private Button consultarBoletas;
 
     @FXML
-    private Button loginButton;
+    private Button salirMenuPrincipal;
 
     @FXML
-    private PasswordField passwordUser;
+    private Button verComprarEventos;
 
     @FXML
-    private Text registro;
-
-    @FXML
-    private VBox usernameField;
-
-    @FXML
-    private TextField usuarioNormal;
-
-    @FXML
-    private Button volverAlStart;
-
-    @FXML
-    void loginBtn(ActionEvent event) {
+    void consultarBoletasBtn(ActionEvent event) {
         
                 try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/4menuUsuario.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/6misBoletas.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
@@ -61,41 +42,28 @@ public class LoginUsuario {
     }
 
     @FXML
-    void normalUserInput(KeyEvent event) {
-
-    }
-
-    @FXML
-    void passwordUserInput(KeyEvent event) {
-
-    }
-
-    @FXML
-    void registroClik(MouseEvent event) {
-        
-                try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/2crearUsuario.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Taquilla Online");
-            stage.show();
-            ((Stage) base.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        
-        
-        
-
-    }
-
-    @FXML
-    void regresarAtrasBtn(ActionEvent event) {
+    void salirMenuPrincipalBtn(ActionEvent event) {
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/0panelStart.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/1LoginUsuario.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Taquilla Online");
+            stage.show();
+            ((Stage) base.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    void verComprarBtn(ActionEvent event) {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/5verYComprarEventos.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();

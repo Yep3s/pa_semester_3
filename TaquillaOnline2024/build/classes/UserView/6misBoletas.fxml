@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerUser.MisBoletas">
+   <children>
+      <ImageView fitHeight="192.0" fitWidth="192.0" layoutX="1036.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/taquillaOnline.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="volverAtras" layoutX="551.0" layoutY="598.0" mnemonicParsing="false" onAction="#volverAtras" prefHeight="76.0" prefWidth="212.0" style="-fx-background-color: red; -fx-background-radius: 200px; -fx-border-radius: 200px; -fx-border-color: black;" text="Volver Atras" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="WHITE" layoutX="543.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mis Boletas">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Text>
+      <TableView fx:id="boletasTableView" layoutY="128.0" prefHeight="414.0" prefWidth="1280.0" style="-fx-background-color: white;">
+        <columns>
+            <TableColumn fx:id="uuid" prefWidth="367.19997251033783" style="-fx-background-color: white;" text="Codigo" />
+            <TableColumn fx:id="evento" prefWidth="576.0000305175781" style="-fx-background-color: white;" text="Evento" />
+          <TableColumn fx:id="localidad" prefWidth="337.5999755859375" style="-fx-background-color: white;" text="Localidad" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

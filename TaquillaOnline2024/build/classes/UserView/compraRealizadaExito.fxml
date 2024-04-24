@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="366.0" prefWidth="567.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerUser.CompraExito">
+   <children>
+      <Label layoutX="158.0" layoutY="205.0" text="Compra Realizada Con Exito" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="122.0" fitWidth="128.0" layoutX="423.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/taquillaOnline.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="aceptarUsuario" layoutX="234.0" layoutY="258.0" mnemonicParsing="false" onAction="#volverAlMenuPrincipalUsuario" prefHeight="38.0" prefWidth="114.0" style="-fx-background-radius: 118px; -fx-border-radius: 118px; -fx-background-color: #15d789;" text="Aceptar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Button>
+      <ImageView fitHeight="148.0" fitWidth="157.0" layoutX="215.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/smiley.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

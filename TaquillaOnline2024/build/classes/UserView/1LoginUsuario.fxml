@@ -41,10 +41,10 @@
                <children>
                   <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Login De Taquilla Online" textAlignment="CENTER" translateX="160.0" translateY="60.0" wrappingWidth="315.13671875" VBox.vgrow="ALWAYS">
                      <font>
-                        <Font name="Georgia Bold Italic" size="26.0" />
+                        <Font name="System Bold Italic" size="32.0" />
                      </font>
                   </Text>
-                  <Separator prefHeight="217.0" prefWidth="634.0" />
+                  <Separator prefHeight="178.0" prefWidth="634.0" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" translateX="30.0" wrappingWidth="114.13671875">
                      <font>
                         <Font size="33.0" />
@@ -85,7 +85,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Text fx:id="registro" fill="#0dc2ffa8" onMouseClicked="#registroClik" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrate" textAlignment="CENTER" translateX="500.0" translateY="80.0" underline="true">
+                  <Text fx:id="registro" fill="#ff00f4a8" onMouseClicked="#registroClik" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrate" textAlignment="CENTER" translateX="500.0" translateY="80.0" underline="true">
                      <font>
                         <Font size="20.0" />
                      </font>

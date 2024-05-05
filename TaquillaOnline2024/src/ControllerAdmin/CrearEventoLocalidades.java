@@ -1,5 +1,7 @@
 package ControllerAdmin;
 
+import Model.LocalidadModel;
+import Sql.LocalidadesSql;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,6 +57,27 @@ public class CrearEventoLocalidades {
     void guardarBtn(ActionEvent event) {
 
         try {
+
+            LocalidadesSql controller = new LocalidadesSql();
+
+            if (controller.buscarLocalidades(localityCode.getText()) != null) {
+                System.out.println("Ya Existe una localidad con este codigo");
+            } else {
+
+                String codigoLocalidad = localityCode.getText();
+                String nombreLocalidad = localityName.getText();
+                int valorLocalidad = Integer.valueOf(localityPrice.getText());
+                int espaciosLocalidad = Integer.valueOf(localitySpaces.getText());
+
+                controller.guardar(new LocalidadModel(codigoLocalidad, nombreLocalidad, valorLocalidad, espaciosLocalidad));
+
+                System.out.println("registro exitoso");
+                localityName.setText("");
+                localitySpaces.setText("");
+                localityPrice.setText("");
+                localityCode.setText("");
+            }
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/5.1guardadoLocalidad.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);

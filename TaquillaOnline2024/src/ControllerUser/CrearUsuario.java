@@ -1,5 +1,7 @@
 package ControllerUser;
 
+import Model.UsuarioModel;
+import Sql.UsuarioSql;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,19 +41,23 @@ public class CrearUsuario {
     private Button volverAtrasNuevo;
 
     @FXML
-    void cedulaNuevoInput(KeyEvent event) {
-
-    }
-
-    @FXML
-    void correoNuevoInput(KeyEvent event) {
-
-    }
-
-    @FXML
     void crearUsuarioNuevoBtn(ActionEvent event) {
 
+        UsuarioModel usuario = new UsuarioModel();
+
+        usuario.setName(nombreNuevo.getText());
+        usuario.setCedula(cedulaNuevo.getText());
+        usuario.setPhone(telefonoNuevo.getText());
+        usuario.setEmail(correoNuevo.getText());
+        usuario.setPassword(passwordNuevo.getText());
+
+        UsuarioSql controller = new UsuarioSql();
+
         try {
+
+            controller.guardar(usuario);
+            System.out.println("Registro Exitoso");
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/3usuarioCreadoExito.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -63,21 +69,6 @@ public class CrearUsuario {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-    }
-
-    @FXML
-    void nuevoNombreInput(KeyEvent event) {
-
-    }
-
-    @FXML
-    void passwordNuevoInput(KeyEvent event) {
-
-    }
-
-    @FXML
-    void telefonoNuevoInput(KeyEvent event) {
 
     }
 

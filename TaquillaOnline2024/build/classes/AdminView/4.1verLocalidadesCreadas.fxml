@@ -25,13 +25,13 @@
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Text>
-      <TableView fx:id="localidadesTable" layoutY="160.0" prefHeight="450.0" prefWidth="1280.0" style="-fx-background-color: white;">
+      <TableView fx:id="localidadesTable" layoutY="160.0" prefHeight="450.0" prefWidth="1280.0">
         <columns>
-            <TableColumn fx:id="id" prefWidth="114.0" style="-fx-background-color: white;" text="id" />
-            <TableColumn fx:id="codigo" prefWidth="157.0" style="-fx-background-color: white;" text="Codigo" />
-          <TableColumn fx:id="nombre" prefWidth="293.0" style="-fx-background-color: white;" text="Nombre De La Localidad" />
-            <TableColumn fx:id="valor" prefWidth="392.0" style="-fx-background-color: white;" text="Valor" />
-            <TableColumn fx:id="capacidad" prefWidth="323.0" style="-fx-background-color: white;" text="Capacidad" />
+            <TableColumn fx:id="id" prefWidth="114.0" text="id" />
+            <TableColumn fx:id="codigo" prefWidth="176.00001525878906" text="Codigo" />
+          <TableColumn fx:id="nombre" prefWidth="275.20001220703125" text="Nombre De La Localidad" />
+            <TableColumn fx:id="valor" prefWidth="392.0" text="Valor" />
+            <TableColumn fx:id="capacidad" prefWidth="323.0" text="Capacidad" />
         </columns>
       </TableView>
       <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1166.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">

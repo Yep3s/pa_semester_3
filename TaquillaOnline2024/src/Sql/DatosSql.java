@@ -16,6 +16,7 @@ public class DatosSql {
         ArrayList<EventoModel> eventos = new ArrayList<EventoModel>();
 
         try {
+            
             sentencia = conexion.getConnection().prepareStatement("select * from eventos");
             resultado = sentencia.executeQuery();
             while (resultado.next()) {

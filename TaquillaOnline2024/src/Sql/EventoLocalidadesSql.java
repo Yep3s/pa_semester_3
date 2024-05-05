@@ -13,6 +13,7 @@ public class EventoLocalidadesSql {
         PreparedStatement setencia = null;
 
         try {
+            
             setencia = conexion.getConnection().prepareStatement("insert into eventos_localidad(id_evento, id_localidades) values(?,?)");
             setencia.setInt(1, e.getEventId());
             setencia.setInt(2, e.getLocalityId());

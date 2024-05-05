@@ -1,5 +1,12 @@
 package ControllerAdmin;
 
+import Model.EventoLocalidadesModel;
+import Model.EventoModel;
+import Model.LocalidadModel;
+import Sql.CrearEventoSql;
+import Sql.EventoLocalidadesSql;
+import Sql.LocalidadesSql;
+import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -58,18 +65,80 @@ public class AsignarLocalidadesPideCode {
     @FXML
     private Label valorLocalidadLabel;
 
+    EventoModel eventoModel = null;
+    LocalidadModel localidad = null;
+
     @FXML
-    void consultarEvento(ActionEvent event) {
+    void consultarEvento(ActionEvent event) throws SQLException {
+        try {
+            CrearEventoSql controller = new CrearEventoSql();
+            eventoModel = controller.buscarEventos(codigoEvento.getText());
+            if (eventoModel != null) {
+                eventNameLabel.setText("Nombre : " + eventoModel.getEventName());
+                descriptionLabel.setText("Descripcion : " + eventoModel.getEventDescription());
+                dateLabel.setText("Fecha : " + eventoModel.getEventDate());
+            } else {
+                System.out.println("no existe este evento");
+                eventNameLabel.setText("");
+                descriptionLabel.setText("");
+                dateLabel.setText("");
+            }
+
+        } catch (Exception e) {
+            System.out.println("error consultarEvento" + e.getMessage());
+        }
 
     }
+    
+        public void limpiarLabelLocalidad() {
+        localidadLabel.setText("");
+        codigoLocalidadLabel.setText("");
+        CapacidadLocalidadLabel.setText("");
+        valorLocalidadLabel.setText("");
+    }
+    
 
     @FXML
     void consultarLocalidad(ActionEvent event) {
-
+        
+                try {
+            System.out.println(codigoLocalidad.getText());
+                    LocalidadesSql localidadesControllerBd = new LocalidadesSql();
+            localidad = localidadesControllerBd.buscarLocalidades(codigoLocalidad.getText());
+            System.out.println(localidad);
+            if (localidad != null) {
+                localidadLabel.setText("Nombre : " + localidad.getLocalityName());
+                codigoLocalidadLabel.setText("Nombre : " + localidad.getLocalityCode());
+                CapacidadLocalidadLabel.setText("Nombre : " + localidad.getNumeroDeEspacios());
+                valorLocalidadLabel.setText("Nombre : " + localidad.getLocalityPrice());
+            } else {
+                limpiarLabelLocalidad();
+            }
+        } catch (Exception e) {
+        }
+        
     }
 
     @FXML
     void siguienteAsignacion(ActionEvent event) {
+        
+                if (eventoModel != null) {
+            if (localidad != null) {
+                try {
+                    EventoLocalidadesSql eventoLocalidadesControlador = new EventoLocalidadesSql();
+                    eventoLocalidadesControlador.guardar(new EventoLocalidadesModel(eventoModel.getId(), localidad.getId()));
+                    localidad = null;
+                    limpiarLabelLocalidad();
+                    System.out.println("guardado");
+                } catch (Exception e) {
+                }
+            } else {
+                System.out.println("Ingrese una localidad");
+            }
+        } else {
+            System.out.println("Ingrese el evento");
+        }
+        
 
     }
 

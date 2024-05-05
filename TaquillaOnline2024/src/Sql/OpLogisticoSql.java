@@ -22,6 +22,7 @@ public class OpLogisticoSql {
 
         PreparedStatement sentencia = null;
         try {
+            
             sentencia = conexion.getConnection().prepareStatement("insert into operadores_logisticos(nombre,cedula,telefono,correo,password) values(?,?,?,?,?)");
             sentencia.setString(1, u.getName());
             sentencia.setString(2, u.getCedula());

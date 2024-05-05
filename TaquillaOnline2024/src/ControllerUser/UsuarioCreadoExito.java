@@ -19,6 +19,8 @@ public class UsuarioCreadoExito {
 
     @FXML
     void volverAlMenuPrincipalUsuario(ActionEvent event) {
+        
+        
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/1LoginUsuario.fxml"));

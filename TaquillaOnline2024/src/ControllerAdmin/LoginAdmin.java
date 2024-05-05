@@ -58,8 +58,13 @@ public class LoginAdmin {
 
     @FXML
     void showWindow2(ActionEvent event) {
-
-        try {
+        
+        String usuario = usuarioAdmin.getText();
+        String password = passwordAdmin.getText();
+        
+        if ("Admin".equals(usuario) && "tomate".equals(password)) {
+            
+                    try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/2menuAdmin.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -71,6 +76,12 @@ public class LoginAdmin {
         } catch (Exception e) {
             e.printStackTrace();
         }
+            
+        }else{
+            errorNoValido.setText("Usuario O Contraseña Incorrectos!");
+        }
+        
+     
 
     }
 

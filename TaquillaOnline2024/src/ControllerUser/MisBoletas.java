@@ -1,40 +1,51 @@
 package ControllerUser;
 
+import Model.BoletasCompradasModel;
+import Sql.LocalidadesSql;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class MisBoletas {
+public class MisBoletas implements Initializable {
 
     @FXML
     private AnchorPane base;
 
     @FXML
-    private TableView<?> boletasTableView;
+    private TableView<BoletasCompradasModel> boletasTableView;
 
     @FXML
-    private TableColumn<?, ?> evento;
+    private TableColumn<BoletasCompradasModel, String> evento;
 
     @FXML
-    private TableColumn<?, ?> localidad;
+    private TableColumn<BoletasCompradasModel, String> localidad;
 
     @FXML
-    private TableColumn<?, ?> uuid;
+    private TableColumn<BoletasCompradasModel, String> uuid;
 
     @FXML
     private Button volverAtras;
 
+    private ObservableList<BoletasCompradasModel> voletasCompradasTable = null;
+
     @FXML
     void volverAtras(ActionEvent event) {
-        
-                try {
+
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/4menuUsuario.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -46,9 +57,24 @@ public class MisBoletas {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        
-        
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        LocalidadesSql localidadesControllerBd = new LocalidadesSql();
+        try {
+            ArrayList<BoletasCompradasModel> voletasCompradas = localidadesControllerBd.misBoletas();
+            System.out.println(voletasCompradas);
+            voletasCompradasTable = FXCollections.observableArrayList(voletasCompradas);
+            uuid.setCellValueFactory(new PropertyValueFactory<BoletasCompradasModel, String>("uuid"));
+            evento.setCellValueFactory(new PropertyValueFactory<BoletasCompradasModel, String>("evento"));
+            localidad.setCellValueFactory(new PropertyValueFactory<BoletasCompradasModel, String>("localidad"));
+            boletasTableView.setItems(voletasCompradasTable);
+        } catch (Exception e) {
+            System.out.println("error al obtener mis voletas" + e.getMessage());
+        }
 
     }
 

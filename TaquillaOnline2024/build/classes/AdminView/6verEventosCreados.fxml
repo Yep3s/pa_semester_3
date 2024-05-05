@@ -25,13 +25,13 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <TableView fx:id="tableEventos" layoutX="-3.0" layoutY="91.0" prefHeight="523.0" prefWidth="1285.0" style="-fx-background-color: white;">
+      <TableView fx:id="tableEventos" layoutX="-3.0" layoutY="91.0" prefHeight="523.0" prefWidth="1285.0">
         <columns>
-          <TableColumn fx:id="id" prefWidth="112.0" style="-fx-background-color: white;" text="ID" />
-            <TableColumn fx:id="codigo" prefWidth="254.0" style="-fx-background-color: white;" text="Codigo" />
-          <TableColumn fx:id="nombre" prefWidth="249.0" style="-fx-background-color: white;" text="Nombre" />
-            <TableColumn fx:id="descripcion" prefWidth="319.0" style="-fx-background-color: white;" text="Descripcion" />
-            <TableColumn fx:id="fecha" prefWidth="349.5999999999999" style="-fx-background-color: white;" text="Fecha" />
+          <TableColumn fx:id="id" prefWidth="112.0" text="ID" />
+            <TableColumn fx:id="codigo" prefWidth="254.0" text="Codigo" />
+          <TableColumn fx:id="nombre" prefWidth="249.0" text="Nombre" />
+            <TableColumn fx:id="descripcion" prefWidth="319.0" text="Descripcion" />
+            <TableColumn fx:id="fecha" prefWidth="349.5999999999999" text="Fecha" />
         </columns>
       </TableView>
       <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="1164.0" layoutY="614.0" pickOnBounds="true" preserveRatio="true">

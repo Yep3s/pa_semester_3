@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class PanelStart {
+    
 
     @FXML
     private AnchorPane base;

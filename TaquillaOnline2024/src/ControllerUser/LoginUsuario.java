@@ -1,5 +1,7 @@
 package ControllerUser;
 
+import Model.UsuarioModel;
+import Sql.UsuarioSql;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,8 +46,17 @@ public class LoginUsuario {
 
     @FXML
     void loginBtn(ActionEvent event) {
-        
-                try {
+
+        try {
+            UsuarioSql controller = new UsuarioSql();
+            UsuarioModel usuario = controller.login(usuarioNormal.getText(), passwordUser.getText());
+
+            if (usuario != null) {
+
+                System.out.println("Existe Un Usuario");
+
+            }
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/4menuUsuario.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -54,26 +65,16 @@ public class LoginUsuario {
             stage.setTitle("Taquilla Online");
             stage.show();
             ((Stage) base.getScene().getWindow()).close();
+
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
     }
 
     @FXML
-    void normalUserInput(KeyEvent event) {
-
-    }
-
-    @FXML
-    void passwordUserInput(KeyEvent event) {
-
-    }
-
-    @FXML
     void registroClik(MouseEvent event) {
-        
-                try {
+
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/2crearUsuario.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -85,9 +86,6 @@ public class LoginUsuario {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        
-        
 
     }
 

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public final class ConexionSql {
+    
 
     private Connection connection;
     private String user = "";

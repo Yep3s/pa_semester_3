@@ -20,6 +20,8 @@ public class GuardadoLocalidadExito {
     @FXML
     void volverAlMenuPrincipal(ActionEvent event) {
         
+        
+        
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/4crearEventoLocalidades.fxml"));
             Parent root = loader.load();

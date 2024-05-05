@@ -1,17 +1,26 @@
 package ControllerAdmin;
 
+import Model.EventosVendidosModel;
+import Sql.CrearEventoSql;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class DatosEstadisticos {
+public class DatosEstadisticos implements Initializable {
 
     @FXML
     private AnchorPane base;
@@ -20,19 +29,23 @@ public class DatosEstadisticos {
     private Button botonVolver;
 
     @FXML
-    private TableColumn<?, ?> cantidad;
+    private TableColumn<EventosVendidosModel, Integer> cantidad;
 
     @FXML
-    private TableColumn<?, ?> evento;
+    private TableColumn<EventosVendidosModel, String> evento;
 
     @FXML
-    private TableColumn<?, ?> localidad;
+    private TableColumn<EventosVendidosModel, String> localidad;
 
     @FXML
-    private TableView<?> tableEventos;
+    private TableView<EventosVendidosModel> tableEventos;
 
     @FXML
-    private TableColumn<?, ?> total;
+    private TableColumn<EventosVendidosModel, Integer> total;
+
+    CrearEventoSql controller = new CrearEventoSql();
+
+    ObservableList<EventosVendidosModel> eventosVendidosTable = null;
 
     @FXML
     void volverBtn(ActionEvent event) {
@@ -49,6 +62,35 @@ public class DatosEstadisticos {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        
+                try {
+            /* ArrayList<EventoModel> eventos = crearEventoControlador.obtenerTodoLosEventos();
+            System.out.println("eventos" + eventos);
+            eventosList = FXCollections.observableArrayList(eventos);
+            nombre.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("nombreDelEvento"));
+            descripcion.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("descripcionDelEvento"));
+            fecha.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("fechaDelEvento"));
+            codigo.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("codigo"));
+
+            tableEventos.setItems(eventosList);*/
+            CrearEventoSql crearEventoControlador = new CrearEventoSql();
+            ArrayList<EventosVendidosModel> eventosVendidos = crearEventoControlador.eventosVendidos();
+            eventosVendidosTable = FXCollections.observableArrayList(eventosVendidos);
+            evento.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, String>("evento"));
+            localidad.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, String>("localidad"));
+            cantidad.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, Integer>("cantidad"));
+            total.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, Integer>("total"));
+            
+            tableEventos.setItems(eventosVendidosTable);
+        } catch (Exception e) {
+            System.out.println("error" + e.getMessage());
+        }
+        
 
     }
 

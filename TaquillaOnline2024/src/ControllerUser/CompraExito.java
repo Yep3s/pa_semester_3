@@ -19,6 +19,7 @@ public class CompraExito {
 
     @FXML
     void volverAlMenuPrincipalUsuario(ActionEvent event) {
+        
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/4menuUsuario.fxml"));

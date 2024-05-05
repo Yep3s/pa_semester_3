@@ -23,8 +23,9 @@ public class ValidarBoletaVeridica {
 
     @FXML
     void volverAtras(ActionEvent event) {
+
         
-                                try {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/LogisticOperatorView/3validarBoleteriaOpLogistico.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);

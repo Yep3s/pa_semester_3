@@ -26,6 +26,7 @@ public class MenuUsuario {
     @FXML
     void consultarBoletasBtn(ActionEvent event) {
         
+        
                 try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/6misBoletas.fxml"));
             Parent root = loader.load();

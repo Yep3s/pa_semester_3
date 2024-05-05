@@ -1,5 +1,7 @@
 package ControllerAdmin;
 
+import Model.OpLogisticoModel;
+import Sql.OpLogisticoSql;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -56,8 +58,21 @@ public class CrearOperadorLogistico {
 
     @FXML
     void guardarBtn(ActionEvent event) {
-        
-                try {
+
+        OpLogisticoModel usuario = new OpLogisticoModel();
+        usuario.setName(opName.getText());
+        usuario.setCedula(opCedula.getText());
+        usuario.setPhone(OpTelefono.getText());
+        usuario.setEmail(opEmail.getText());
+        usuario.setPassword(opPassword.getText());
+
+        OpLogisticoSql controller = new OpLogisticoSql();
+
+        try {
+
+            controller.guardar(usuario);
+            System.out.println("Registro Exitoso");
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/AdminView/8crearOperadorLogisticoGuardado.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);

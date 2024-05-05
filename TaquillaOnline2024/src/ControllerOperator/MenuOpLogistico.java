@@ -24,6 +24,7 @@ public class MenuOpLogistico {
     void cerrarSesionBtn(ActionEvent event) {
         
         
+        
                 try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/LogisticOperatorView/1LoginOpLogistico.fxml"));
             Parent root = loader.load();

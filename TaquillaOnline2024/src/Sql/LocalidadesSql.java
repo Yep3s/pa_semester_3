@@ -17,6 +17,7 @@ public class LocalidadesSql {
 
         PreparedStatement sentencia = null;
         try {
+            
             sentencia = conexion.getConnection().prepareStatement("insert into localidades(codigo,nombre,valor,capacidad) values(?,?,?,?)");
             sentencia.setString(1, l.getLocalityCode());
             sentencia.setString(2, l.getLocalityName());

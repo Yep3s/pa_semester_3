@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 public class CrearOperadorLogisticoGuardado {
 
+    
+    
     @FXML
     private Button aceptarBoton;
 

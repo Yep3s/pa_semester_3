@@ -1,17 +1,26 @@
 package ControllerAdmin;
 
+import Model.LocalidadModel;
+import Sql.LocalidadesSql;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class VerLocalidadesCreadas {
+public class VerLocalidadesCreadas implements Initializable {
 
     @FXML
     private AnchorPane base;
@@ -20,22 +29,24 @@ public class VerLocalidadesCreadas {
     private Button botonVolver;
 
     @FXML
-    private TableColumn<?, ?> capacidad;
+    private TableColumn<LocalidadModel, Integer> capacidad;
 
     @FXML
-    private TableColumn<?, ?> codigo;
+    private TableColumn<LocalidadModel, String> codigo;
 
     @FXML
-    private TableColumn<?, ?> id;
+    private TableColumn<LocalidadModel, Integer> id;
 
     @FXML
-    private TableView<?> localidadesTable;
+    private TableView<LocalidadModel> localidadesTable;
 
     @FXML
-    private TableColumn<?, ?> nombre;
+    private TableColumn<LocalidadModel, String> nombre;
 
     @FXML
-    private TableColumn<?, ?> valor;
+    private TableColumn<LocalidadModel, Integer> valor;
+
+    private ObservableList<LocalidadModel> localidades = null;
 
     @FXML
     void volverBtn(ActionEvent event) {
@@ -52,9 +63,26 @@ public class VerLocalidadesCreadas {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         
-        
-        
+                try {
+                    LocalidadesSql localidadesControllerBd = new LocalidadesSql();
+            ArrayList<LocalidadModel> localidadesDb = localidadesControllerBd.obtenerTodasLasLocalidades();
+            localidades = FXCollections.observableArrayList(localidadesDb);
+            id.setCellValueFactory(new PropertyValueFactory<LocalidadModel, Integer>("id"));
+            codigo.setCellValueFactory(new PropertyValueFactory<LocalidadModel, String>("localityCode"));
+            nombre.setCellValueFactory(new PropertyValueFactory<LocalidadModel, String>("localityName"));
+            valor.setCellValueFactory(new PropertyValueFactory<LocalidadModel, Integer>("localityPrice"));
+            capacidad.setCellValueFactory(new PropertyValueFactory<LocalidadModel, Integer>("numeroDeEspacios"));
+            localidadesTable.setItems(localidades);
+        } catch (Exception e) {
+            System.out.println("error" + e.getMessage());
+        }
+
     }
 
 }

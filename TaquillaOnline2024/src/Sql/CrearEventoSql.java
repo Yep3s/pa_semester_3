@@ -15,7 +15,7 @@ public class CrearEventoSql {
 
         PreparedStatement sentencia = null;
         try {
-            sentencia = conexion.getConnection().prepareStatement("insert into tabla (code, name, description, date) values(?,?,?,?)");
+            sentencia = conexion.getConnection().prepareStatement("insert into eventos (codigo, nombre, descripcion, fecha) values(?,?,?,?)");
             sentencia.setString(1, u.getCode());
             sentencia.setString(2, u.getEventName());
             sentencia.setString(3, u.getEventDescription());
@@ -34,7 +34,7 @@ public class CrearEventoSql {
         EventoModel eventoModel = null;
         try {
 
-            sentencia = conexion.getConnection().prepareStatement("select * from tabla where code=?");
+            sentencia = conexion.getConnection().prepareStatement("select * from eventos where codigo=?");
             sentencia.setString(1, code);
             resultado = sentencia.executeQuery();
             while (resultado.next()) {
@@ -63,7 +63,7 @@ public class CrearEventoSql {
 
         try {
 
-            sentencia = conexion.getConnection().prepareStatement("select * from tabla");
+            sentencia = conexion.getConnection().prepareStatement("select * from eventos");
             resultado = sentencia.executeQuery();
             while (resultado.next()) {
                 eventos.add(

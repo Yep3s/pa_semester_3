@@ -39,6 +39,32 @@ public class CrearUsuario {
 
     @FXML
     private Button volverAtrasNuevo;
+    
+        @FXML
+    void telefonoNuevoInput(KeyEvent event) {
+
+    }
+    
+        @FXML
+    void passwordNuevoInput(KeyEvent event) {
+
+    }
+    
+        @FXML
+    void nuevoNombreInput(KeyEvent event) {
+
+    }
+    
+        @FXML
+    void cedulaNuevoInput(KeyEvent event) {
+
+    }
+
+    @FXML
+    void correoNuevoInput(KeyEvent event) {
+
+    }
+    
 
     @FXML
     void crearUsuarioNuevoBtn(ActionEvent event) {

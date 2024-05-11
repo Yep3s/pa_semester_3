@@ -28,6 +28,11 @@ public class ValidarBoletaOpLogistico {
     private Button volverAnteriorVentana;
 
     @FXML
+    void validarBoletaInput(KeyEvent event) {
+
+    }
+
+    @FXML
     void verificarBtn(ActionEvent event) {
 
         try {

@@ -43,6 +43,17 @@ public class LoginUsuario {
 
     @FXML
     private Button volverAlStart;
+    
+      
+        @FXML
+    void passwordUserInput(KeyEvent event) {
+
+    }
+    
+        @FXML
+    void normalUserInput(KeyEvent event) {
+
+    }
 
     @FXML
     void loginBtn(ActionEvent event) {

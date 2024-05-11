@@ -40,6 +40,11 @@ public class LoginOpLogistico {
     private Button volverAlStart;
 
     @FXML
+    void passwordOpLogisticoInput(KeyEvent event) {
+
+    }
+
+    @FXML
     void loginBtn(ActionEvent event) {
 
         try {

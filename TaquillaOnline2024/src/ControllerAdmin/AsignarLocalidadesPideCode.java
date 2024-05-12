@@ -108,9 +108,9 @@ public class AsignarLocalidadesPideCode {
             System.out.println(localidad);
             if (localidad != null) {
                 localidadLabel.setText("Nombre : " + localidad.getLocalityName());
-                codigoLocalidadLabel.setText("Nombre : " + localidad.getLocalityCode());
-                CapacidadLocalidadLabel.setText("Nombre : " + localidad.getNumeroDeEspacios());
-                valorLocalidadLabel.setText("Nombre : " + localidad.getLocalityPrice());
+                codigoLocalidadLabel.setText("Codigo : " + localidad.getLocalityCode());
+                CapacidadLocalidadLabel.setText("Capacidad : " + localidad.getNumeroDeEspacios());
+                valorLocalidadLabel.setText("Valor : " + localidad.getLocalityPrice());
             } else {
                 limpiarLabelLocalidad();
             }

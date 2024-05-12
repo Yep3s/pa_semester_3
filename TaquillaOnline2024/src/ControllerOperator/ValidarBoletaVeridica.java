@@ -34,6 +34,9 @@ public class ValidarBoletaVeridica {
             stage.setTitle("Taquilla Online");
             stage.show();
             ((Stage) base.getScene().getWindow()).close();
+            
+            localidadLabel.setText("hola");
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

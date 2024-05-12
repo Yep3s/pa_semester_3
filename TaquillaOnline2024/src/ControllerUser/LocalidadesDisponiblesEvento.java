@@ -79,8 +79,8 @@ public class LocalidadesDisponiblesEvento implements Initializable {
             LocalidadesSql localidadesControllerBd = new LocalidadesSql();
             ArrayList<LocalidadModel> localidadesDb = localidadesControllerBd.obtenerTodasLasLocalidades();
             localidades = FXCollections.observableArrayList(localidadesDb);
-            nombre.setCellValueFactory(new PropertyValueFactory<LocalidadModel, String>("nombreLocalidad"));
-            valor.setCellValueFactory(new PropertyValueFactory<LocalidadModel, Integer>("valorLocalidad"));
+            nombre.setCellValueFactory(new PropertyValueFactory<LocalidadModel, String>("localityName"));
+            valor.setCellValueFactory(new PropertyValueFactory<LocalidadModel, Integer>("localityPrice"));
             cantidad.setCellValueFactory(new PropertyValueFactory<LocalidadModel, Integer>("numeroDeEspacios"));
             tablaLocalidad.setItems(localidades);
 

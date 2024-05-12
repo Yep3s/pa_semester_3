@@ -73,10 +73,10 @@ public class EventosDisponiblesUser implements Initializable {
             ArrayList<EventoModel> eventos = controller.obtenerTodosLosEventos();
             System.out.println("eventos" + eventos);
             eventosList = FXCollections.observableArrayList(eventos);
-            nombre.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("nombreDelEvento"));
-            descripcion.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("descripcionDelEvento"));
-            fecha.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("fechaDelEvento"));
-            codigo.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("codigo"));
+            nombre.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("eventName"));
+            descripcion.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("eventDescription"));
+            fecha.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("eventDate"));
+            codigo.setCellValueFactory(new PropertyValueFactory<EventoModel, String>("code"));
 
             tablaEventos.setItems(eventosList);
  

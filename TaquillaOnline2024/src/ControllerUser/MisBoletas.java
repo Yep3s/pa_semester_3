@@ -69,8 +69,8 @@ public class MisBoletas implements Initializable {
             System.out.println(voletasCompradas);
             voletasCompradasTable = FXCollections.observableArrayList(voletasCompradas);
             uuid.setCellValueFactory(new PropertyValueFactory<BoletasCompradasModel, String>("uuid"));
-            evento.setCellValueFactory(new PropertyValueFactory<BoletasCompradasModel, String>("evento"));
-            localidad.setCellValueFactory(new PropertyValueFactory<BoletasCompradasModel, String>("localidad"));
+            evento.setCellValueFactory(new PropertyValueFactory<BoletasCompradasModel, String>("event"));
+            localidad.setCellValueFactory(new PropertyValueFactory<BoletasCompradasModel, String>("locality"));
             boletasTableView.setItems(voletasCompradasTable);
         } catch (Exception e) {
             System.out.println("error al obtener mis voletas" + e.getMessage());

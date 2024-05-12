@@ -20,12 +20,12 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <TableView fx:id="tableEventos" layoutY="101.0" prefHeight="530.0" prefWidth="1280.0" style="-fx-background-color: white;">
+      <TableView fx:id="tableEventos" layoutY="101.0" prefHeight="530.0" prefWidth="1280.0">
         <columns>
-          <TableColumn fx:id="evento" minWidth="0.0" prefWidth="272.0000427365303" style="-fx-background-color: white;" text="Evento" />
-            <TableColumn fx:id="localidad" prefWidth="228.79998779296875" style="-fx-background-color: white;" text="Localidad" />
-            <TableColumn fx:id="cantidad" prefWidth="435.9999694824219" style="-fx-background-color: white;" text="Cantidad" />
-            <TableColumn fx:id="total" prefWidth="342.4000244140625" style="-fx-background-color: white;" text="Total" />
+          <TableColumn fx:id="evento" minWidth="0.0" prefWidth="272.0000427365303" text="Evento" />
+            <TableColumn fx:id="localidad" prefWidth="228.79998779296875" text="Localidad" />
+            <TableColumn fx:id="cantidad" prefWidth="435.9999694824219" text="Cantidad" />
+            <TableColumn fx:id="total" prefWidth="342.4000244140625" text="Total" />
         </columns>
       </TableView>
       <Text fill="WHITE" layoutX="502.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datos Estadisticos">

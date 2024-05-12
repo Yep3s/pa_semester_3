@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="base" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerUser.MisBoletas">
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerUser.MisBoletas">
    <children>
       <ImageView fitHeight="192.0" fitWidth="192.0" layoutX="1036.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -30,11 +30,11 @@
             <Font name="System Bold Italic" size="43.0" />
          </font>
       </Text>
-      <TableView fx:id="boletasTableView" layoutY="128.0" prefHeight="414.0" prefWidth="1280.0" style="-fx-background-color: white;">
+      <TableView fx:id="boletasTableView" layoutY="128.0" prefHeight="414.0" prefWidth="1280.0">
         <columns>
-            <TableColumn fx:id="uuid" prefWidth="367.19997251033783" style="-fx-background-color: white;" text="Codigo" />
-            <TableColumn fx:id="evento" prefWidth="576.0000305175781" style="-fx-background-color: white;" text="Evento" />
-          <TableColumn fx:id="localidad" prefWidth="337.5999755859375" style="-fx-background-color: white;" text="Localidad" />
+            <TableColumn fx:id="uuid" prefWidth="367.19997251033783" text="Codigo" />
+            <TableColumn fx:id="evento" prefWidth="576.0000305175781" text="Evento" />
+          <TableColumn fx:id="localidad" prefWidth="337.5999755859375" text="Localidad" />
         </columns>
       </TableView>
    </children>

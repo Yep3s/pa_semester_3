@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="base" prefHeight="720.0" prefWidth="572.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerUser.CrearUsuario">
+<AnchorPane id="AnchorPane" fx:id="base" prefHeight="720.0" prefWidth="572.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerUser.CrearUsuario">
    <children>
       <Text fill="WHITE" layoutX="134.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro De Usuario Taquilla Online" textAlignment="CENTER" wrappingWidth="317.8017578125">
          <font>
@@ -39,13 +39,13 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Text>
-      <TextField fx:id="telefonoNuevo" alignment="CENTER" layoutX="297.0" layoutY="459.0" onKeyTyped="#telefonoNuevoInput" prefHeight="26.0" prefWidth="210.0" promptText="Numero De Telefono" style="-fx-background-radius: 300px; -fx-border-radius: 300px;" />
+      <TextField fx:id="telefonoNuevo" alignment="CENTER" layoutX="298.0" layoutY="402.0" onKeyTyped="#telefonoNuevoInput" prefHeight="26.0" prefWidth="210.0" promptText="Numero De Telefono" style="-fx-background-radius: 300px; -fx-border-radius: 300px;" />
       <Text fill="WHITE" layoutX="50.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo Electronico">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Text>
-      <TextField fx:id="correoNuevo" alignment="CENTER" layoutX="298.0" layoutY="401.0" onKeyTyped="#correoNuevoInput" prefHeight="26.0" prefWidth="210.0" promptText="Correo Electronico" style="-fx-background-radius: 300px; -fx-border-radius: 300px;" />
+      <TextField fx:id="correoNuevo" alignment="CENTER" layoutX="298.0" layoutY="459.0" onKeyTyped="#correoNuevoInput" prefHeight="26.0" prefWidth="210.0" promptText="Correo Electronico" style="-fx-background-radius: 300px; -fx-border-radius: 300px;" />
       <Text fill="WHITE" layoutX="92.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña">
          <font>
             <Font name="System Bold" size="22.0" />

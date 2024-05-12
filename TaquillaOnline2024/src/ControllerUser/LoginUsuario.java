@@ -43,14 +43,13 @@ public class LoginUsuario {
 
     @FXML
     private Button volverAlStart;
-    
-      
-        @FXML
+
+    @FXML
     void passwordUserInput(KeyEvent event) {
 
     }
-    
-        @FXML
+
+    @FXML
     void normalUserInput(KeyEvent event) {
 
     }
@@ -66,16 +65,18 @@ public class LoginUsuario {
 
                 System.out.println("Existe Un Usuario");
 
-            }
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/4menuUsuario.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.setTitle("Taquilla Online");
+                stage.show();
+                ((Stage) base.getScene().getWindow()).close();
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/4menuUsuario.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle("Taquilla Online");
-            stage.show();
-            ((Stage) base.getScene().getWindow()).close();
+            }else{
+                errorMessage.setText("Error: Usuario No Encontrado En La Base De Datos!");
+            }
 
         } catch (Exception e) {
         }

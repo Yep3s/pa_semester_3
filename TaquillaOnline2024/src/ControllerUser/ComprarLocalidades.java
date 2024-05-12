@@ -18,6 +18,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class ComprarLocalidades implements Initializable {
+    
 
     @FXML
     private AnchorPane base;
@@ -76,6 +77,22 @@ public class ComprarLocalidades implements Initializable {
             cantidadBoletas.setText("");
             precioFinal.setText("");
             System.out.println("voletas compradas");
+            
+            
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserView/compraRealizadaExito.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Taquilla Online");
+            stage.show();
+            ((Stage) base.getScene().getWindow()).close();
+
+            
+            
+            
+            
+            
         } catch (Exception e) {
             System.out.println("error al guardar las voletas" + e.getMessage());
         }

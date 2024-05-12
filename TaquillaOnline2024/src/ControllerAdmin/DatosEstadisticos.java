@@ -81,9 +81,9 @@ public class DatosEstadisticos implements Initializable {
             CrearEventoSql crearEventoControlador = new CrearEventoSql();
             ArrayList<EventosVendidosModel> eventosVendidos = crearEventoControlador.eventosVendidos();
             eventosVendidosTable = FXCollections.observableArrayList(eventosVendidos);
-            evento.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, String>("evento"));
-            localidad.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, String>("localidad"));
-            cantidad.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, Integer>("cantidad"));
+            evento.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, String>("event"));
+            localidad.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, String>("locality"));
+            cantidad.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, Integer>("quantity"));
             total.setCellValueFactory(new PropertyValueFactory<EventosVendidosModel, Integer>("total"));
             
             tableEventos.setItems(eventosVendidosTable);

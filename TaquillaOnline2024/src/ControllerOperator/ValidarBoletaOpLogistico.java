@@ -39,11 +39,19 @@ public class ValidarBoletaOpLogistico {
             String codigo = validarBoleta.getText();
             LocalidadesSql localidadesControllerBd = new LocalidadesSql();
             BoletasCompradasModel voletasComprada = localidadesControllerBd.buscarVoleta(codigo);
+            String nombreLocalidad = localidadesControllerBd.buscarNombreLocalidadPorCodigoBoleta(codigo);
             if (voletasComprada != null) {
 
                 try {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/LogisticOperatorView/4validacionBoletaVeridica.fxml"));
                     Parent root = loader.load();
+                    
+                    // Obtener el controlador de la nueva vista
+                    ValidarBoletaVeridica controlador = loader.getController();
+                    // Pasar el nombre de la localidad al nuevo controlador
+                    controlador.setLocalidad(nombreLocalidad);
+                    
+                    
                     Scene scene = new Scene(root);
                     Stage stage = new Stage();
                     stage.setScene(scene);

@@ -39,5 +39,13 @@ public class ValidarBoletaVeridica {
         }
 
     }
+    
+    
+        public void setLocalidad(String nombreLocalidad) {
+        localidadLabel.setText(nombreLocalidad);
+    }
+    
+    
+    
 
 }

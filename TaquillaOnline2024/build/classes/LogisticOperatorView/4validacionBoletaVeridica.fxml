@@ -26,9 +26,9 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Label fx:id="localidadLabel" layoutX="91.0" layoutY="173.0" text="Label Localidad Boleta" textFill="WHITE">
+      <Label fx:id="localidadLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="185.0" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
       <Button fx:id="volverAtras" layoutX="229.0" layoutY="308.0" mnemonicParsing="false" onAction="#volverAtras" prefHeight="34.0" prefWidth="90.0" style="-fx-border-radius: 118px; -fx-background-radius: 118px; -fx-background-color: white; -fx-border-color: black;" text="Volver">

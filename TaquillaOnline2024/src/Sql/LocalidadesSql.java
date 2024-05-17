@@ -143,4 +143,28 @@ public class LocalidadesSql {
         return boletasCompradas;
     }
     
+        public String buscarNombreLocalidadPorCodigoBoleta(String codigoBoleta) throws SQLException {
+        PreparedStatement sentencia = null;
+        ResultSet resultado = null;
+        String nombreLocalidad = null;
+
+        try {
+            sentencia = conexion.getConnection().prepareStatement(
+                "select l.nombre as localidad " +
+                "from voletas_compradas v " +
+                "join localidades l on v.id_localidad = l.id " +
+                "where v.uuid = ?"
+            );
+            sentencia.setString(1, codigoBoleta);
+            resultado = sentencia.executeQuery();
+            if (resultado.next()) {
+                nombreLocalidad = resultado.getString("localidad");
+            }
+        } catch (SQLException e) {
+            throw new SQLException("Ocurrió un error al buscar el nombre de la localidad \n" + e.getMessage());
+        }
+        return nombreLocalidad;
+    }
+    
+    
 }
